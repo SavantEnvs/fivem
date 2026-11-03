@@ -1,0 +1,9 @@
+project: savantenvs/fivem
+target: fuzz_net_buffer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_net_buffer/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz_net_buffer
+    libfuzzer: true
+    timeout: 30
